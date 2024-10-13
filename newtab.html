@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom New Tab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="banner-container">
+    <div id="welcome">Welcome, MOHAMMAD ABDUL QUADEER</div>
+    <div id="time"></div>
+    <div id="temperature"></div>
+  </div>
+  <div id="main-content">
+    <div id="sidebar">
+      <ul id="links-list"></ul>
+      <button id="add-link" class="icon-button">+</button>
+    </div>
+    <div id="content">
+      <div id="github-activity" class="card">
+        <h2>GitHub Activity</h2>
+        <div class="github-activity-container">
+          <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=quadeer2003&layout=pie" alt="GitHub Activity Graph"> -->
+          <img src="https://github-readme-activity-graph.vercel.app/graph?username=quadeer2003&theme=dracula" alt="GitHub Activity Graph" width="550">
+        </div>
+      </div>
+      <div id="task-manager">
+        <h2>Kanban board</h2>
+        <div class="kanban-board">
+          <div class="kanban-column" id="todo">
+            <h3>To Do</h3>
+            <div class="kanban-items"></div>
+            <input type="text" class="new-task" placeholder="New task">
+            <button class="add-task">Add</button>
+          </div>
+          <div class="kanban-column" id="in-progress">
+            <h3>In Progress</h3>
+            <div class="kanban-items"></div>
+          </div>
+          <div class="kanban-column" id="done">
+            <h3>Done</h3>
+            <div class="kanban-items"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

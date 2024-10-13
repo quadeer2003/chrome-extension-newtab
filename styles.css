@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: url('images/nord.jpg'); /* Update with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#welcome {
+  font-family: 'Sixtyfour', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#time, #temperature {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#main-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+#sidebar {
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: calc(100% - 40px);
+}
+
+#links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+#links-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#links-list img {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.icon-button:hover {
+  background-color: #0056b3;
+}
+
+#content {
+  flex: 1;
+  margin-left: 100px; /* Adjusted to account for the fixed sidebar */
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px; /* Add spacing between columns */
+}
+
+.kanban-column {
+  flex: 1; /* Allow columns to take equal space */
+  max-width: 45%; /* Increase the maximum width of the kanban columns */
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.kanban-items {
+  min-height: 100px;
+}
+
+.new-task {
+  width: 50%;
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.add-task{
+  background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.kanban-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.options-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.options-menu {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.options-menu button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.options-menu button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#banner-container {
+  position: relative;
+  background-image: url('images/banner.gif'); /* Update with the path to your banner image */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  height: 150px;
+}
+
+#welcome, #temperature {
+  position: relative;
+  z-index: 1;
+  color: white; /* Ensure text is readable over the banner */
+}
+#fullcalendar {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.github-activity-container {
+  /* display: flex;
+  
+  justify-content: space-between; */
+  align-items: center;
+  text-align: center;
+}
